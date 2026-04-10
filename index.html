@@ -26,14 +26,14 @@
 
         .profile-img-container {
             text-align: center;
-            margin-bottom: 1rem; 
+            margin-bottom: 1rem;
         }
 
         .profile-img {
-            width: 150px; 
+            width: 150px;
             height: 150px;
-            border-radius: 50%; 
-            border: 3px solid var(--accent-color); 
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
             object-fit: cover;
         }
 
@@ -141,7 +141,6 @@
             padding: 1rem 0;
         }
 
-        /* Estilo para os ícones das tecnologias */
         .skill-item {
             display: flex;
             flex-direction: column;
@@ -164,6 +163,15 @@
             font-size: 0.75rem;
             color: var(--text-secondary);
             font-weight: 600;
+        }
+
+        a.skill-item {
+            transition: transform 0.3s ease;
+         cursor: pointer;
+        }
+
+        a.skill-item:hover {
+            transform: scale(1.1);
         }
 
         ul {
@@ -204,6 +212,7 @@
             <button class="nav-btn" onclick="showSection('skills')">Skills</button>
             <button class="nav-btn" onclick="showSection('experience')">Experience & Projects</button>
             <button class="nav-btn" onclick="showSection('education')">Education</button>
+            <button class="nav-btn" onclick="showSection('contact')">Contact</button>
         </nav>
     </header>
 
@@ -359,6 +368,32 @@
                     <li>Certified in full-stack development with a strong focus on <strong>Spring Boot</strong> for
                         backend architecture and <strong>Angular</strong> for dynamic frontend interfaces.</li>
                 </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="card" style="text-align: center;">
+                <h2>Let's Connect</h2>
+                <p style="margin-bottom: 2rem;">Feel free to reach out for collaborations or just a friendly chat!</p>
+
+                <div class="skills-container">
+                    <a href="mailto:pedrohenriquedev44@gmail.com" style="text-decoration: none;" class="skill-item">
+                        <i class="devicon-google-plain"></i>
+                        <span>Email</span>
+                    </a>
+
+                    <a href="https://github.com/henriquepedrohttp" target="_blank" style="text-decoration: none;"
+                        class="skill-item">
+                        <i class="devicon-github-original"></i>
+                        <span>GitHub</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/pedro-henrique-cordeiro-94a942375/" target="_blank" style="text-decoration: none;"
+                        class="skill-item">
+                        <i class="devicon-linkedin-plain"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
