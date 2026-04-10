@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro | Full-Stack Developer</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-hover: #0284c7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: linear-gradient(180deg, #020617 0%, var(--bg-color) 100%);
+            border-bottom: 1px solid #334155;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        button.nav-btn {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 2px solid #334155;
+            padding: 0.5rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        button.nav-btn:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        button.nav-btn.active {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: #fff;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            border: 1px solid #334155;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        h2 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-tag {
+            background-color: #334155;
+            color: var(--accent-color);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        ul {
+            list-style-position: inside;
+            color: var(--text-secondary);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pedro</h1>
+        <p class="subtitle">Junior Full-Stack Developer</p>
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">Recife, PE, Brazil</p>
+        
+        <nav>
+            <button class="nav-btn active" onclick="showSection('about')">About Me</button>
+            <button class="nav-btn" onclick="showSection('skills')">Skills</button>
+            <button class="nav-btn" onclick="showSection('experience')">Experience & Projects</button>
+            <button class="nav-btn" onclick="showSection('education')">Education</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="section active">
+            <div class="card">
+                <h2>About Me</h2>
+                <p>
+                    I am a highly adaptable Full-Stack Developer with a strong sense of teamwork and collaboration. 
+                    I excel in identifying the needs of a team and filling those gaps to ensure smooth workflows. 
+                    Beyond writing clean code, I have a passion for <strong>Business Analysis</strong>—meeting with different departments, 
+                    understanding their daily bottlenecks, and creating customized software solutions that improve their quality of life and operational efficiency.
+                </p>
+                <br>
+                <p>
+                    I am fluent in spoken English and listening comprehension, allowing me to easily consume documentation, courses, and communicate effectively in multicultural environments. I am always eager to learn and quickly adapt to the culture of the companies I work for.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="card">
+                <h2>Hard Skills</h2>
+                <div class="skills-container">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Angular</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">Java (Spring Boot)</span>
+                    <span class="skill-tag">Python (Django)</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">CI/CD Pipelines</span>
+                    <span class="skill-tag">Microservices</span>
+                    <span class="skill-tag">Redis</span>
+                    <span class="skill-tag">IoT</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Soft Skills</h2>
+                <ul>
+                    <li><strong>Requirements Elicitation:</strong> Gathering business rules directly from stakeholders to design technical solutions.</li>
+                    <li><strong>Cross-functional Communication:</strong> Bridging the gap between technical and non-technical teams.</li>
+                    <li><strong>High Adaptability:</strong> Quick integration into new corporate cultures and technology stacks.</li>
+                    <li><strong>Team Collaboration:</strong> Proactively identifying and filling operational gaps within the team.</li>
+                    <li><strong>Fluent Verbal English:</strong> Strong conversational and listening skills.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="card">
+                <h3>Workflow Optimization & Internal Tools</h3>
+                <p style="color: var(--accent-color); font-size: 0.9rem; margin-bottom: 0.5rem;">Current Role</p>
+                <ul>
+                    <li>Hold regular meetings with various business sectors to map out operational inefficiencies.</li>
+                    <li>Design and develop tailored programmatic solutions that automate workflows, significantly improving employee quality of life.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Tax Invoice API Management (NFe/NFSe)</h3>
+                <p style="color: var(--accent-color); font-size: 0.9rem; margin-bottom: 0.5rem;">PHP Backend Development</p>
+                <ul>
+                    <li>Maintained and updated a legacy PHP API responsible for issuing state and national tax invoices.</li>
+                    <li>Worked directly with SOAP protocols, managing XML envelopes to securely transmit data for invoice issuance, cancellation, and validation.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Financial ERP Module</h3>
+                <p style="color: var(--accent-color); font-size: 0.9rem; margin-bottom: 0.5rem;">Full-Stack Side Project</p>
+                <ul>
+                    <li>Developed a robust financial management system to deepen knowledge in <strong>Spring Boot, Angular, Microservices, and Redis</strong>.</li>
+                    <li>Implemented complex architectural features including Accounts Payable/Receivable, Cost Centers, Cash Flow tracking, and automated Competency Views.</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>Additional Projects</h3>
+                <ul>
+                    <li><strong>CBMPE System:</strong> Contributed to a major software project for the Pernambuco Military Firefighters (Corpo de Bombeiros).</li>
+                    <li><strong>Smart Meeting Rooms:</strong> Developed IoT solutions for room management.</li>
+                    <li><strong>Healthcare AI Research:</strong> Participated in an academic research project focused on the application of Artificial Intelligence in healthcare.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="card">
+                <h3>Systems Analysis and Development</h3>
+                <p style="color: var(--text-secondary);">Senac Pernambuco | Night Shift</p>
+                <ul>
+                    <li>Currently enrolled. Broad academic foundation in software architecture, cloud computing, and IoT.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Full-Stack Web Development Certification</h3>
+                <p style="color: var(--text-secondary);">Bootcamp / Specialized Course</p>
+                <ul>
+                    <li>Certified in full-stack development with a strong focus on <strong>Spring Boot</strong> for backend architecture and <strong>Angular</strong> for dynamic frontend interfaces.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function showSection(sectionId) {
+            // Remove active class from all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Add active class to clicked button and target section
+            document.getElementById(sectionId).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
