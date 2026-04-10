@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedro | Full-Stack Developer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
     <style>
         :root {
             --bg-color: #0f172a;
@@ -19,6 +22,19 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .profile-img-container {
+            text-align: center;
+            margin-bottom: 1rem; 
+        }
+
+        .profile-img {
+            width: 150px; 
+            height: 150px;
+            border-radius: 50%; 
+            border: 3px solid var(--accent-color); 
+            object-fit: cover;
         }
 
         body {
@@ -120,15 +136,33 @@
         .skills-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.8rem;
+            gap: 1.5rem;
+            justify-content: center;
+            padding: 1rem 0;
         }
 
-        .skill-tag {
-            background-color: #334155;
+        /* Estilo para os ícones das tecnologias */
+        .skill-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            width: 80px;
+        }
+
+        .skill-item i {
+            font-size: 3rem;
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+        }
+
+        .skill-item:hover i {
             color: var(--accent-color);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
+        }
+
+        .skill-item span {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
             font-weight: 600;
         }
 
@@ -142,18 +176,29 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
+
 <body>
 
     <header>
+        <div class="profile-img-container">
+            <img src="perfil.jpg" alt="Foto de perfil" class="profile-img">
+        </div>
         <h1>Pedro</h1>
         <p class="subtitle">Junior Full-Stack Developer</p>
         <p style="color: var(--text-secondary); font-size: 0.9rem;">Recife, PE, Brazil</p>
-        
+
         <nav>
             <button class="nav-btn active" onclick="showSection('about')">About Me</button>
             <button class="nav-btn" onclick="showSection('skills')">Skills</button>
@@ -167,14 +212,18 @@
             <div class="card">
                 <h2>About Me</h2>
                 <p>
-                    I am a highly adaptable Full-Stack Developer with a strong sense of teamwork and collaboration. 
-                    I excel in identifying the needs of a team and filling those gaps to ensure smooth workflows. 
-                    Beyond writing clean code, I have a passion for <strong>Business Analysis</strong>—meeting with different departments, 
-                    understanding their daily bottlenecks, and creating customized software solutions that improve their quality of life and operational efficiency.
+                    I am a highly adaptable Full-Stack Developer with a strong sense of teamwork and collaboration.
+                    I excel in identifying the needs of a team and filling those gaps to ensure smooth workflows.
+                    Beyond writing clean code, I have a passion for <strong>Business Analysis</strong>—meeting with
+                    different departments,
+                    understanding their daily bottlenecks, and creating customized software solutions that improve their
+                    quality of life and operational efficiency.
                 </p>
                 <br>
                 <p>
-                    I am fluent in spoken English and listening comprehension, allowing me to easily consume documentation, courses, and communicate effectively in multicultural environments. I am always eager to learn and quickly adapt to the culture of the companies I work for.
+                    I am fluent in spoken English and listening comprehension, allowing me to easily consume
+                    documentation, courses, and communicate effectively in multicultural environments. I am always eager
+                    to learn and quickly adapt to the culture of the companies I work for.
                 </p>
             </div>
         </section>
@@ -183,29 +232,64 @@
             <div class="card">
                 <h2>Hard Skills</h2>
                 <div class="skills-container">
-                    <span class="skill-tag">HTML5</span>
-                    <span class="skill-tag">CSS3</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Angular</span>
-                    <span class="skill-tag">PHP</span>
-                    <span class="skill-tag">Java (Spring Boot)</span>
-                    <span class="skill-tag">Python (Django)</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">CI/CD Pipelines</span>
-                    <span class="skill-tag">Microservices</span>
-                    <span class="skill-tag">Redis</span>
-                    <span class="skill-tag">IoT</span>
+                    <div class="skill-item">
+                        <i class="devicon-html5-plain"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-css3-plain"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-javascript-plain"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-react-original"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-angularjs-plain"></i>
+                        <span>Angular</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-php-plain"></i>
+                        <span>PHP</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-spring-original"></i>
+                        <span>Spring Boot</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-python-plain"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-docker-plain"></i>
+                        <span>Docker</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-redis-plain"></i>
+                        <span>Redis</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-mysql-plain"></i>
+                        <span>MySQL</span>
+                    </div>
                 </div>
             </div>
 
             <div class="card">
                 <h2>Soft Skills</h2>
                 <ul>
-                    <li><strong>Requirements Elicitation:</strong> Gathering business rules directly from stakeholders to design technical solutions.</li>
-                    <li><strong>Cross-functional Communication:</strong> Bridging the gap between technical and non-technical teams.</li>
-                    <li><strong>High Adaptability:</strong> Quick integration into new corporate cultures and technology stacks.</li>
-                    <li><strong>Team Collaboration:</strong> Proactively identifying and filling operational gaps within the team.</li>
+                    <li><strong>Requirements Elicitation:</strong> Gathering business rules directly from stakeholders
+                        to design technical solutions.</li>
+                    <li><strong>Cross-functional Communication:</strong> Bridging the gap between technical and
+                        non-technical teams.</li>
+                    <li><strong>High Adaptability:</strong> Quick integration into new corporate cultures and technology
+                        stacks.</li>
+                    <li><strong>Team Collaboration:</strong> Proactively identifying and filling operational gaps within
+                        the team.</li>
                     <li><strong>Fluent Verbal English:</strong> Strong conversational and listening skills.</li>
                 </ul>
             </div>
@@ -217,34 +301,43 @@
                 <p style="color: var(--accent-color); font-size: 0.9rem; margin-bottom: 0.5rem;">Current Role</p>
                 <ul>
                     <li>Hold regular meetings with various business sectors to map out operational inefficiencies.</li>
-                    <li>Design and develop tailored programmatic solutions that automate workflows, significantly improving employee quality of life.</li>
+                    <li>Design and develop tailored programmatic solutions that automate workflows, significantly
+                        improving employee quality of life.</li>
                 </ul>
             </div>
 
             <div class="card">
                 <h3>Tax Invoice API Management (NFe/NFSe)</h3>
-                <p style="color: var(--accent-color); font-size: 0.9rem; margin-bottom: 0.5rem;">PHP Backend Development</p>
+                <p style="color: var(--accent-color); font-size: 0.9rem; margin-bottom: 0.5rem;">PHP Backend Development
+                </p>
                 <ul>
-                    <li>Maintained and updated a legacy PHP API responsible for issuing state and national tax invoices.</li>
-                    <li>Worked directly with SOAP protocols, managing XML envelopes to securely transmit data for invoice issuance, cancellation, and validation.</li>
+                    <li>Maintained and updated a legacy PHP API responsible for issuing state and national tax invoices.
+                    </li>
+                    <li>Worked directly with SOAP protocols, managing XML envelopes to securely transmit data for
+                        invoice issuance, cancellation, and validation.</li>
                 </ul>
             </div>
 
             <div class="card">
                 <h3>Financial ERP Module</h3>
-                <p style="color: var(--accent-color); font-size: 0.9rem; margin-bottom: 0.5rem;">Full-Stack Side Project</p>
+                <p style="color: var(--accent-color); font-size: 0.9rem; margin-bottom: 0.5rem;">Full-Stack Side Project
+                </p>
                 <ul>
-                    <li>Developed a robust financial management system to deepen knowledge in <strong>Spring Boot, Angular, Microservices, and Redis</strong>.</li>
-                    <li>Implemented complex architectural features including Accounts Payable/Receivable, Cost Centers, Cash Flow tracking, and automated Competency Views.</li>
+                    <li>Developed a robust financial management system to deepen knowledge in <strong>Spring Boot,
+                            Angular, Microservices, and Redis</strong>.</li>
+                    <li>Implemented complex architectural features including Accounts Payable/Receivable, Cost Centers,
+                        Cash Flow tracking, and automated Competency Views.</li>
                 </ul>
             </div>
-            
+
             <div class="card">
                 <h3>Additional Projects</h3>
                 <ul>
-                    <li><strong>CBMPE System:</strong> Contributed to a major software project for the Pernambuco Military Firefighters (Corpo de Bombeiros).</li>
+                    <li><strong>CBMPE System:</strong> Contributed to a major software project for the Pernambuco
+                        Military Firefighters (Corpo de Bombeiros).</li>
                     <li><strong>Smart Meeting Rooms:</strong> Developed IoT solutions for room management.</li>
-                    <li><strong>Healthcare AI Research:</strong> Participated in an academic research project focused on the application of Artificial Intelligence in healthcare.</li>
+                    <li><strong>Healthcare AI Research:</strong> Participated in an academic research project focused on
+                        the application of Artificial Intelligence in healthcare.</li>
                 </ul>
             </div>
         </section>
@@ -254,7 +347,8 @@
                 <h3>Systems Analysis and Development</h3>
                 <p style="color: var(--text-secondary);">Senac Pernambuco | Night Shift</p>
                 <ul>
-                    <li>Currently enrolled. Broad academic foundation in software architecture, cloud computing, and IoT.</li>
+                    <li>Currently enrolled. Broad academic foundation in software architecture, cloud computing, and
+                        IoT.</li>
                 </ul>
             </div>
 
@@ -262,7 +356,8 @@
                 <h3>Full-Stack Web Development Certification</h3>
                 <p style="color: var(--text-secondary);">Bootcamp / Specialized Course</p>
                 <ul>
-                    <li>Certified in full-stack development with a strong focus on <strong>Spring Boot</strong> for backend architecture and <strong>Angular</strong> for dynamic frontend interfaces.</li>
+                    <li>Certified in full-stack development with a strong focus on <strong>Spring Boot</strong> for
+                        backend architecture and <strong>Angular</strong> for dynamic frontend interfaces.</li>
                 </ul>
             </div>
         </section>
@@ -270,20 +365,19 @@
 
     <script>
         function showSection(sectionId) {
-            // Remove active class from all sections
             document.querySelectorAll('.section').forEach(section => {
                 section.classList.remove('active');
             });
-            
-            // Remove active class from all buttons
+
             document.querySelectorAll('.nav-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            
-            // Add active class to clicked button and target section
+
             document.getElementById(sectionId).classList.add('active');
-            event.target.classList.add('active');
+            // Usando currentTarget para garantir que o botão certo receba a classe active
+            event.currentTarget.classList.add('active');
         }
     </script>
 </body>
+
 </html>
